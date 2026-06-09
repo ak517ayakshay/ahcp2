@@ -91,7 +91,7 @@ async def update_clinical_note(
     Force-regenerate a clinical note by its DB id.
 
     Looks up member_id, composition_type, and month from the existing record,
-    re-invokes the medulla workflow, and overwrites the row in fhir_compositions.
+    overwrites the row in fhir_compositions.
     Returns the refreshed note with the same id.
     """
     ...
@@ -156,8 +156,6 @@ async def update_monthly_report(
     Refresh a monthly report by its DB id.
 
     Looks up provider_id, composition_type, and month from the existing record,
-    re-aggregates qualifying members, and regenerates the summary document.
-    Useful for RPM week-later refresh or mid-month CCM progress snapshots.
     Returns the updated report with the same id.
     """
     ...
