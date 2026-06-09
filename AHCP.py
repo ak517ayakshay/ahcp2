@@ -26,7 +26,7 @@ class ClinicalNoteResponse(BaseModel):
     service_month: datetime.date  # normalised to 1st of month
     note: Union[
         Alyf_FHIR_Composition.ClinicalNoteCCM,
-        Alyf_FHIR_Composition.SOAPNote,
+        Alyf_FHIR_Composition.ClinicalNoteRPM,
     ]
     created_at: datetime.datetime
 
